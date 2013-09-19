@@ -17,7 +17,7 @@ func TestByteSlice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -40,7 +40,7 @@ func TestFloat32Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -63,7 +63,7 @@ func TestInt8Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -86,7 +86,7 @@ func TestInt16Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -109,7 +109,7 @@ func TestInt32Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -132,7 +132,7 @@ func TestInt64Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -155,7 +155,7 @@ func TestUintSlice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -178,7 +178,7 @@ func TestUint16Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -201,7 +201,7 @@ func TestUint32Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -224,7 +224,7 @@ func TestUint64Slice(t *testing.T) {
 	}
 	s.Sort()
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -250,10 +250,10 @@ func TestStringMapByValue(t *testing.T) {
 	}
 	first, second := s[0], s[1]
 	if first.Key != "foo" || first.Value != "bar" || second.Key != "baz" || second.Value != "zoo" {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
 
@@ -268,9 +268,9 @@ func TestStringMapByKey(t *testing.T) {
 	}
 	first, second := s[0], s[1]
 	if first.Key != "baz" || first.Value != "zoo" || second.Key != "foo" || second.Value != "bar" {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 	if !sort.IsSorted(s) {
-		t.Fatal()
+		t.Fatal("not as expected")
 	}
 }
